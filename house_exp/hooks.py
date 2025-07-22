@@ -137,13 +137,13 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+ 	"*": {
+ 		"on_update": "method",
+ 		"on_cancel": "method",
+ 		"on_trash": "method"
+ 	}
+ }
 
 # Scheduled Tasks
 # ---------------
@@ -174,9 +174,12 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "house_exp.event.get_events"
-# }
+override_whitelisted_methods = {
+ 	"frappe.desk.doctype.event.event.get_events": "house_exp.event.get_events"
+ }
+app_include_docs = {
+    "House Expense": "app.house_expense.api.house_expense"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
