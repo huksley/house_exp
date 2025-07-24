@@ -107,8 +107,8 @@ services:
         bench new-site --mariadb-user-host-login-scope='%' --admin-password=admin --db-root-username=root --db-root-password=admin --install-app erpnext --set-default frontend;
         echo "setting admin password";
         bench set-admin-password "${ADMIN_PASSWORD:-123123}";
-        bench get-app https://github.com/huksley/house_exp --branch main
-        bench install-app house_exp
+        bench get-app https://github.com/huksley/house_exp.git --branch main
+        bench --site frontend install-app house_exp
 
   db:
     image: mariadb:10.6
